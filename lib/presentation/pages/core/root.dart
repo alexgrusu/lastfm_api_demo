@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp.router(
       routeInformationParser: _myAppRouter.defaultRouteParser(),
       routerDelegate: _myAppRouter.delegate(
-        initialRoutes: [MyHomePageRoute(title: '')],
+        initialRoutes: [MyHomePageRoute(title: 'LastFm API')],
       ),
     );
   }
