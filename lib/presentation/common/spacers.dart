@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SpaceH10 extends StatelessWidget {
-  const SpaceH10();
+  const SpaceH10({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class SpaceH10 extends StatelessWidget {
 }
 
 class SpaceH20 extends StatelessWidget {
-  const SpaceH20();
+  const SpaceH20({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
