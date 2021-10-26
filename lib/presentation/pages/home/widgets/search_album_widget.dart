@@ -6,6 +6,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class SearchAlbumWidget extends StatelessWidget {
   final controller = TextEditingController();
 
+  SearchAlbumWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SearchAlbumBloc, SearchAlbumState>(
@@ -47,21 +49,30 @@ class SearchAlbumWidget extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   Container(
-                    height:
-                        context.read<SearchAlbumBloc>().state.albums!.length *
-                            20,
+                    height: context.read<SearchAlbumBloc>().state.albums != null
+                        ? context.read<SearchAlbumBloc>().state.albums!.length *
+                            20
+                        : 0,
                     padding: const EdgeInsets.symmetric(horizontal: 35),
                     child: ListView.builder(
                       physics: const NeverScrollableScrollPhysics(),
                       itemCount:
                           context.read<SearchAlbumBloc>().state.albums?.length,
                       itemExtent: 45,
-                      itemBuilder: (context, index) => AlbumCard(
-                          album: context
-                              .read<SearchAlbumBloc>()
-                              .state
-                              .albums!
-                              .elementAt(index)),
+                      itemBuilder: (context, index) {
+                        if (context.read<SearchAlbumBloc>().state.albums !=
+                            null) {
+                          return AlbumCard(
+                            album: context
+                                .read<SearchAlbumBloc>()
+                                .state
+                                .albums!
+                                .elementAt(index),
+                          );
+                        } else {
+                          return Container();
+                        }
+                      },
                     ),
                   ),
                 ],
