@@ -10,6 +10,7 @@ part 'search_album_event.dart';
 part 'search_album_state.dart';
 part 'search_album_bloc.freezed.dart';
 
+/// Makes use of the SearchAlbum API by using state management and events
 @injectable
 class SearchAlbumBloc extends Bloc<SearchAlbumEvent, SearchAlbumState> {
   final ISearchAlbumRepository _searchAlbumRepository;

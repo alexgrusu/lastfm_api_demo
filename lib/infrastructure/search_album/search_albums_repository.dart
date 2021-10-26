@@ -10,6 +10,7 @@ import 'dart:convert';
 
 @LazySingleton(as: ISearchAlbumRepository)
 class SearchAlbumRepository implements ISearchAlbumRepository {
+  /// Calls the API URL builder and sends a request accordingly
   @override
   Future<Either<SearchAlbumFailure, List<Album>>> getAlbums(
       String albumName) async {
