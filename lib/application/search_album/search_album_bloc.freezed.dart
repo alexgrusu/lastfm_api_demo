@@ -235,11 +235,11 @@ class _$SearchAlbumStateTearOff {
   const _$SearchAlbumStateTearOff();
 
   _SearchAlbumState call(
-      {required KtList<Album> songs,
+      {List<Album>? albums,
       required SearchAlbumFailure failure,
       required bool isSubmitting}) {
     return _SearchAlbumState(
-      songs: songs,
+      albums: albums,
       failure: failure,
       isSubmitting: isSubmitting,
     );
@@ -251,7 +251,7 @@ const $SearchAlbumState = _$SearchAlbumStateTearOff();
 
 /// @nodoc
 mixin _$SearchAlbumState {
-  KtList<Album> get songs => throw _privateConstructorUsedError;
+  List<Album>? get albums => throw _privateConstructorUsedError;
   SearchAlbumFailure get failure => throw _privateConstructorUsedError;
   bool get isSubmitting => throw _privateConstructorUsedError;
 
@@ -266,7 +266,7 @@ abstract class $SearchAlbumStateCopyWith<$Res> {
           SearchAlbumState value, $Res Function(SearchAlbumState) then) =
       _$SearchAlbumStateCopyWithImpl<$Res>;
   $Res call(
-      {KtList<Album> songs, SearchAlbumFailure failure, bool isSubmitting});
+      {List<Album>? albums, SearchAlbumFailure failure, bool isSubmitting});
 
   $SearchAlbumFailureCopyWith<$Res> get failure;
 }
@@ -282,15 +282,15 @@ class _$SearchAlbumStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? songs = freezed,
+    Object? albums = freezed,
     Object? failure = freezed,
     Object? isSubmitting = freezed,
   }) {
     return _then(_value.copyWith(
-      songs: songs == freezed
-          ? _value.songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as KtList<Album>,
+      albums: albums == freezed
+          ? _value.albums
+          : albums // ignore: cast_nullable_to_non_nullable
+              as List<Album>?,
       failure: failure == freezed
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -318,7 +318,7 @@ abstract class _$SearchAlbumStateCopyWith<$Res>
       __$SearchAlbumStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {KtList<Album> songs, SearchAlbumFailure failure, bool isSubmitting});
+      {List<Album>? albums, SearchAlbumFailure failure, bool isSubmitting});
 
   @override
   $SearchAlbumFailureCopyWith<$Res> get failure;
@@ -337,15 +337,15 @@ class __$SearchAlbumStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? songs = freezed,
+    Object? albums = freezed,
     Object? failure = freezed,
     Object? isSubmitting = freezed,
   }) {
     return _then(_SearchAlbumState(
-      songs: songs == freezed
-          ? _value.songs
-          : songs // ignore: cast_nullable_to_non_nullable
-              as KtList<Album>,
+      albums: albums == freezed
+          ? _value.albums
+          : albums // ignore: cast_nullable_to_non_nullable
+              as List<Album>?,
       failure: failure == freezed
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -362,10 +362,10 @@ class __$SearchAlbumStateCopyWithImpl<$Res>
 
 class _$_SearchAlbumState implements _SearchAlbumState {
   const _$_SearchAlbumState(
-      {required this.songs, required this.failure, required this.isSubmitting});
+      {this.albums, required this.failure, required this.isSubmitting});
 
   @override
-  final KtList<Album> songs;
+  final List<Album>? albums;
   @override
   final SearchAlbumFailure failure;
   @override
@@ -373,7 +373,7 @@ class _$_SearchAlbumState implements _SearchAlbumState {
 
   @override
   String toString() {
-    return 'SearchAlbumState(songs: $songs, failure: $failure, isSubmitting: $isSubmitting)';
+    return 'SearchAlbumState(albums: $albums, failure: $failure, isSubmitting: $isSubmitting)';
   }
 
   @override
@@ -381,14 +381,15 @@ class _$_SearchAlbumState implements _SearchAlbumState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SearchAlbumState &&
-            (identical(other.songs, songs) || other.songs == songs) &&
+            const DeepCollectionEquality().equals(other.albums, albums) &&
             (identical(other.failure, failure) || other.failure == failure) &&
             (identical(other.isSubmitting, isSubmitting) ||
                 other.isSubmitting == isSubmitting));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, songs, failure, isSubmitting);
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(albums), failure, isSubmitting);
 
   @JsonKey(ignore: true)
   @override
@@ -398,12 +399,12 @@ class _$_SearchAlbumState implements _SearchAlbumState {
 
 abstract class _SearchAlbumState implements SearchAlbumState {
   const factory _SearchAlbumState(
-      {required KtList<Album> songs,
+      {List<Album>? albums,
       required SearchAlbumFailure failure,
       required bool isSubmitting}) = _$_SearchAlbumState;
 
   @override
-  KtList<Album> get songs;
+  List<Album>? get albums;
   @override
   SearchAlbumFailure get failure;
   @override

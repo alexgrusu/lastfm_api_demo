@@ -20,20 +20,14 @@ class _$AlbumTearOff {
   _Album call(
       {required String name,
       required String artist,
-      required String id,
       required String url,
-      required String smallImageUrl,
-      required String mediumImageUrl,
-      required String largeImageUrl,
-      required bool streamable}) {
+      required List<dynamic> image,
+      required String streamable}) {
     return _Album(
       name: name,
       artist: artist,
-      id: id,
       url: url,
-      smallImageUrl: smallImageUrl,
-      mediumImageUrl: mediumImageUrl,
-      largeImageUrl: largeImageUrl,
+      image: image,
       streamable: streamable,
     );
   }
@@ -46,12 +40,9 @@ const $Album = _$AlbumTearOff();
 mixin _$Album {
   String get name => throw _privateConstructorUsedError;
   String get artist => throw _privateConstructorUsedError;
-  String get id => throw _privateConstructorUsedError;
   String get url => throw _privateConstructorUsedError;
-  String get smallImageUrl => throw _privateConstructorUsedError;
-  String get mediumImageUrl => throw _privateConstructorUsedError;
-  String get largeImageUrl => throw _privateConstructorUsedError;
-  bool get streamable => throw _privateConstructorUsedError;
+  List<dynamic> get image => throw _privateConstructorUsedError;
+  String get streamable => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $AlbumCopyWith<Album> get copyWith => throw _privateConstructorUsedError;
@@ -64,12 +55,9 @@ abstract class $AlbumCopyWith<$Res> {
   $Res call(
       {String name,
       String artist,
-      String id,
       String url,
-      String smallImageUrl,
-      String mediumImageUrl,
-      String largeImageUrl,
-      bool streamable});
+      List<dynamic> image,
+      String streamable});
 }
 
 /// @nodoc
@@ -84,11 +72,8 @@ class _$AlbumCopyWithImpl<$Res> implements $AlbumCopyWith<$Res> {
   $Res call({
     Object? name = freezed,
     Object? artist = freezed,
-    Object? id = freezed,
     Object? url = freezed,
-    Object? smallImageUrl = freezed,
-    Object? mediumImageUrl = freezed,
-    Object? largeImageUrl = freezed,
+    Object? image = freezed,
     Object? streamable = freezed,
   }) {
     return _then(_value.copyWith(
@@ -100,30 +85,18 @@ class _$AlbumCopyWithImpl<$Res> implements $AlbumCopyWith<$Res> {
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
               as String,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      smallImageUrl: smallImageUrl == freezed
-          ? _value.smallImageUrl
-          : smallImageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediumImageUrl: mediumImageUrl == freezed
-          ? _value.mediumImageUrl
-          : mediumImageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      largeImageUrl: largeImageUrl == freezed
-          ? _value.largeImageUrl
-          : largeImageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
       streamable: streamable == freezed
           ? _value.streamable
           : streamable // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as String,
     ));
   }
 }
@@ -136,12 +109,9 @@ abstract class _$AlbumCopyWith<$Res> implements $AlbumCopyWith<$Res> {
   $Res call(
       {String name,
       String artist,
-      String id,
       String url,
-      String smallImageUrl,
-      String mediumImageUrl,
-      String largeImageUrl,
-      bool streamable});
+      List<dynamic> image,
+      String streamable});
 }
 
 /// @nodoc
@@ -157,11 +127,8 @@ class __$AlbumCopyWithImpl<$Res> extends _$AlbumCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? artist = freezed,
-    Object? id = freezed,
     Object? url = freezed,
-    Object? smallImageUrl = freezed,
-    Object? mediumImageUrl = freezed,
-    Object? largeImageUrl = freezed,
+    Object? image = freezed,
     Object? streamable = freezed,
   }) {
     return _then(_Album(
@@ -173,30 +140,18 @@ class __$AlbumCopyWithImpl<$Res> extends _$AlbumCopyWithImpl<$Res>
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
               as String,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String,
-      smallImageUrl: smallImageUrl == freezed
-          ? _value.smallImageUrl
-          : smallImageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      mediumImageUrl: mediumImageUrl == freezed
-          ? _value.mediumImageUrl
-          : mediumImageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
-      largeImageUrl: largeImageUrl == freezed
-          ? _value.largeImageUrl
-          : largeImageUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>,
       streamable: streamable == freezed
           ? _value.streamable
           : streamable // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as String,
     ));
   }
 }
@@ -207,11 +162,8 @@ class _$_Album implements _Album {
   const _$_Album(
       {required this.name,
       required this.artist,
-      required this.id,
       required this.url,
-      required this.smallImageUrl,
-      required this.mediumImageUrl,
-      required this.largeImageUrl,
+      required this.image,
       required this.streamable});
 
   @override
@@ -219,21 +171,15 @@ class _$_Album implements _Album {
   @override
   final String artist;
   @override
-  final String id;
-  @override
   final String url;
   @override
-  final String smallImageUrl;
+  final List<dynamic> image;
   @override
-  final String mediumImageUrl;
-  @override
-  final String largeImageUrl;
-  @override
-  final bool streamable;
+  final String streamable;
 
   @override
   String toString() {
-    return 'Album(name: $name, artist: $artist, id: $id, url: $url, smallImageUrl: $smallImageUrl, mediumImageUrl: $mediumImageUrl, largeImageUrl: $largeImageUrl, streamable: $streamable)';
+    return 'Album(name: $name, artist: $artist, url: $url, image: $image, streamable: $streamable)';
   }
 
   @override
@@ -243,21 +189,15 @@ class _$_Album implements _Album {
             other is _Album &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.artist, artist) || other.artist == artist) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.smallImageUrl, smallImageUrl) ||
-                other.smallImageUrl == smallImageUrl) &&
-            (identical(other.mediumImageUrl, mediumImageUrl) ||
-                other.mediumImageUrl == mediumImageUrl) &&
-            (identical(other.largeImageUrl, largeImageUrl) ||
-                other.largeImageUrl == largeImageUrl) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
             (identical(other.streamable, streamable) ||
                 other.streamable == streamable));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, artist, id, url,
-      smallImageUrl, mediumImageUrl, largeImageUrl, streamable);
+  int get hashCode => Object.hash(runtimeType, name, artist, url,
+      const DeepCollectionEquality().hash(image), streamable);
 
   @JsonKey(ignore: true)
   @override
@@ -269,29 +209,20 @@ abstract class _Album implements Album {
   const factory _Album(
       {required String name,
       required String artist,
-      required String id,
       required String url,
-      required String smallImageUrl,
-      required String mediumImageUrl,
-      required String largeImageUrl,
-      required bool streamable}) = _$_Album;
+      required List<dynamic> image,
+      required String streamable}) = _$_Album;
 
   @override
   String get name;
   @override
   String get artist;
   @override
-  String get id;
-  @override
   String get url;
   @override
-  String get smallImageUrl;
+  List<dynamic> get image;
   @override
-  String get mediumImageUrl;
-  @override
-  String get largeImageUrl;
-  @override
-  bool get streamable;
+  String get streamable;
   @override
   @JsonKey(ignore: true)
   _$AlbumCopyWith<_Album> get copyWith => throw _privateConstructorUsedError;

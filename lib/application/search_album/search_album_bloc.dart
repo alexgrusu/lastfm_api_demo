@@ -5,7 +5,6 @@ import 'package:fastfm_api_demo/domain/search_album/search_album_failure.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:kt_dart/kt.dart';
 
 part 'search_album_event.dart';
 part 'search_album_state.dart';
@@ -26,16 +25,23 @@ class SearchAlbumBloc extends Bloc<SearchAlbumEvent, SearchAlbumState> {
     yield* event.map(
       getAlbums: (e) async* {
         yield state.copyWith(
-          failure: const SearchAlbumFailure.invalidMethod(),
+          failure: const SearchAlbumFailure.none(),
           isSubmitting: true,
         );
 
         final failureOrSuccess =
             await _searchAlbumRepository.getAlbums(e.albumName);
 
-        yield state.copyWith(
-          failure: const SearchAlbumFailure.none(),
-          isSubmitting: false,
+        yield failureOrSuccess.fold(
+          (f) => state.copyWith(
+            failure: f,
+            isSubmitting: false,
+          ),
+          (data) => state.copyWith(
+            failure: const SearchAlbumFailure.none(),
+            albums: data,
+            isSubmitting: false,
+          ),
         );
       },
     );

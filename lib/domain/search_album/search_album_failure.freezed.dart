@@ -28,6 +28,10 @@ class _$SearchAlbumFailureTearOff {
   _InvalidMethod invalidMethod() {
     return const _InvalidMethod();
   }
+
+  _SomethingWentWrong somethingWentWrong() {
+    return const _SomethingWentWrong();
+  }
 }
 
 /// @nodoc
@@ -40,6 +44,7 @@ mixin _$SearchAlbumFailure {
     required TResult Function() none,
     required TResult Function() invalidService,
     required TResult Function() invalidMethod,
+    required TResult Function() somethingWentWrong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +52,7 @@ mixin _$SearchAlbumFailure {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -54,6 +60,7 @@ mixin _$SearchAlbumFailure {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -62,6 +69,7 @@ mixin _$SearchAlbumFailure {
     required TResult Function(_None value) none,
     required TResult Function(_InvalidService value) invalidService,
     required TResult Function(_InvalidMethod value) invalidMethod,
+    required TResult Function(_SomethingWentWrong value) somethingWentWrong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -69,6 +77,7 @@ mixin _$SearchAlbumFailure {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +85,7 @@ mixin _$SearchAlbumFailure {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -139,6 +149,7 @@ class _$_None implements _None {
     required TResult Function() none,
     required TResult Function() invalidService,
     required TResult Function() invalidMethod,
+    required TResult Function() somethingWentWrong,
   }) {
     return none();
   }
@@ -149,6 +160,7 @@ class _$_None implements _None {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
   }) {
     return none?.call();
   }
@@ -159,6 +171,7 @@ class _$_None implements _None {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
     required TResult orElse(),
   }) {
     if (none != null) {
@@ -173,6 +186,7 @@ class _$_None implements _None {
     required TResult Function(_None value) none,
     required TResult Function(_InvalidService value) invalidService,
     required TResult Function(_InvalidMethod value) invalidMethod,
+    required TResult Function(_SomethingWentWrong value) somethingWentWrong,
   }) {
     return none(this);
   }
@@ -183,6 +197,7 @@ class _$_None implements _None {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
   }) {
     return none?.call(this);
   }
@@ -193,6 +208,7 @@ class _$_None implements _None {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
     required TResult orElse(),
   }) {
     if (none != null) {
@@ -250,6 +266,7 @@ class _$_InvalidService implements _InvalidService {
     required TResult Function() none,
     required TResult Function() invalidService,
     required TResult Function() invalidMethod,
+    required TResult Function() somethingWentWrong,
   }) {
     return invalidService();
   }
@@ -260,6 +277,7 @@ class _$_InvalidService implements _InvalidService {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
   }) {
     return invalidService?.call();
   }
@@ -270,6 +288,7 @@ class _$_InvalidService implements _InvalidService {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
     required TResult orElse(),
   }) {
     if (invalidService != null) {
@@ -284,6 +303,7 @@ class _$_InvalidService implements _InvalidService {
     required TResult Function(_None value) none,
     required TResult Function(_InvalidService value) invalidService,
     required TResult Function(_InvalidMethod value) invalidMethod,
+    required TResult Function(_SomethingWentWrong value) somethingWentWrong,
   }) {
     return invalidService(this);
   }
@@ -294,6 +314,7 @@ class _$_InvalidService implements _InvalidService {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
   }) {
     return invalidService?.call(this);
   }
@@ -304,6 +325,7 @@ class _$_InvalidService implements _InvalidService {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
     required TResult orElse(),
   }) {
     if (invalidService != null) {
@@ -361,6 +383,7 @@ class _$_InvalidMethod implements _InvalidMethod {
     required TResult Function() none,
     required TResult Function() invalidService,
     required TResult Function() invalidMethod,
+    required TResult Function() somethingWentWrong,
   }) {
     return invalidMethod();
   }
@@ -371,6 +394,7 @@ class _$_InvalidMethod implements _InvalidMethod {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
   }) {
     return invalidMethod?.call();
   }
@@ -381,6 +405,7 @@ class _$_InvalidMethod implements _InvalidMethod {
     TResult Function()? none,
     TResult Function()? invalidService,
     TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
     required TResult orElse(),
   }) {
     if (invalidMethod != null) {
@@ -395,6 +420,7 @@ class _$_InvalidMethod implements _InvalidMethod {
     required TResult Function(_None value) none,
     required TResult Function(_InvalidService value) invalidService,
     required TResult Function(_InvalidMethod value) invalidMethod,
+    required TResult Function(_SomethingWentWrong value) somethingWentWrong,
   }) {
     return invalidMethod(this);
   }
@@ -405,6 +431,7 @@ class _$_InvalidMethod implements _InvalidMethod {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
   }) {
     return invalidMethod?.call(this);
   }
@@ -415,6 +442,7 @@ class _$_InvalidMethod implements _InvalidMethod {
     TResult Function(_None value)? none,
     TResult Function(_InvalidService value)? invalidService,
     TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
     required TResult orElse(),
   }) {
     if (invalidMethod != null) {
@@ -426,4 +454,121 @@ class _$_InvalidMethod implements _InvalidMethod {
 
 abstract class _InvalidMethod implements SearchAlbumFailure {
   const factory _InvalidMethod() = _$_InvalidMethod;
+}
+
+/// @nodoc
+abstract class _$SomethingWentWrongCopyWith<$Res> {
+  factory _$SomethingWentWrongCopyWith(
+          _SomethingWentWrong value, $Res Function(_SomethingWentWrong) then) =
+      __$SomethingWentWrongCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$SomethingWentWrongCopyWithImpl<$Res>
+    extends _$SearchAlbumFailureCopyWithImpl<$Res>
+    implements _$SomethingWentWrongCopyWith<$Res> {
+  __$SomethingWentWrongCopyWithImpl(
+      _SomethingWentWrong _value, $Res Function(_SomethingWentWrong) _then)
+      : super(_value, (v) => _then(v as _SomethingWentWrong));
+
+  @override
+  _SomethingWentWrong get _value => super._value as _SomethingWentWrong;
+}
+
+/// @nodoc
+
+class _$_SomethingWentWrong implements _SomethingWentWrong {
+  const _$_SomethingWentWrong();
+
+  @override
+  String toString() {
+    return 'SearchAlbumFailure.somethingWentWrong()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _SomethingWentWrong);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() none,
+    required TResult Function() invalidService,
+    required TResult Function() invalidMethod,
+    required TResult Function() somethingWentWrong,
+  }) {
+    return somethingWentWrong();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? none,
+    TResult Function()? invalidService,
+    TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
+  }) {
+    return somethingWentWrong?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? none,
+    TResult Function()? invalidService,
+    TResult Function()? invalidMethod,
+    TResult Function()? somethingWentWrong,
+    required TResult orElse(),
+  }) {
+    if (somethingWentWrong != null) {
+      return somethingWentWrong();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_None value) none,
+    required TResult Function(_InvalidService value) invalidService,
+    required TResult Function(_InvalidMethod value) invalidMethod,
+    required TResult Function(_SomethingWentWrong value) somethingWentWrong,
+  }) {
+    return somethingWentWrong(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_None value)? none,
+    TResult Function(_InvalidService value)? invalidService,
+    TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
+  }) {
+    return somethingWentWrong?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_None value)? none,
+    TResult Function(_InvalidService value)? invalidService,
+    TResult Function(_InvalidMethod value)? invalidMethod,
+    TResult Function(_SomethingWentWrong value)? somethingWentWrong,
+    required TResult orElse(),
+  }) {
+    if (somethingWentWrong != null) {
+      return somethingWentWrong(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _SomethingWentWrong implements SearchAlbumFailure {
+  const factory _SomethingWentWrong() = _$_SomethingWentWrong;
 }

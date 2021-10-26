@@ -22,22 +22,16 @@ class _$AlbumDtoTearOff {
   const _$AlbumDtoTearOff();
 
   _AlbumDto call(
-      {@JsonKey(ignore: true) String? name,
+      {@JsonKey(ignore: false) String? name,
       required String? artist,
-      required String? id,
       required String? url,
-      required String? smallImageUrl,
-      required String? mediumImageUrl,
-      required String? largeImageUrl,
-      required bool? streamable}) {
+      required List<dynamic>? image,
+      required String? streamable}) {
     return _AlbumDto(
       name: name,
       artist: artist,
-      id: id,
       url: url,
-      smallImageUrl: smallImageUrl,
-      mediumImageUrl: mediumImageUrl,
-      largeImageUrl: largeImageUrl,
+      image: image,
       streamable: streamable,
     );
   }
@@ -52,15 +46,12 @@ const $AlbumDto = _$AlbumDtoTearOff();
 
 /// @nodoc
 mixin _$AlbumDto {
-  @JsonKey(ignore: true)
+  @JsonKey(ignore: false)
   String? get name => throw _privateConstructorUsedError;
   String? get artist => throw _privateConstructorUsedError;
-  String? get id => throw _privateConstructorUsedError;
   String? get url => throw _privateConstructorUsedError;
-  String? get smallImageUrl => throw _privateConstructorUsedError;
-  String? get mediumImageUrl => throw _privateConstructorUsedError;
-  String? get largeImageUrl => throw _privateConstructorUsedError;
-  bool? get streamable => throw _privateConstructorUsedError;
+  List<dynamic>? get image => throw _privateConstructorUsedError;
+  String? get streamable => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -73,14 +64,11 @@ abstract class $AlbumDtoCopyWith<$Res> {
   factory $AlbumDtoCopyWith(AlbumDto value, $Res Function(AlbumDto) then) =
       _$AlbumDtoCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(ignore: true) String? name,
+      {@JsonKey(ignore: false) String? name,
       String? artist,
-      String? id,
       String? url,
-      String? smallImageUrl,
-      String? mediumImageUrl,
-      String? largeImageUrl,
-      bool? streamable});
+      List<dynamic>? image,
+      String? streamable});
 }
 
 /// @nodoc
@@ -95,11 +83,8 @@ class _$AlbumDtoCopyWithImpl<$Res> implements $AlbumDtoCopyWith<$Res> {
   $Res call({
     Object? name = freezed,
     Object? artist = freezed,
-    Object? id = freezed,
     Object? url = freezed,
-    Object? smallImageUrl = freezed,
-    Object? mediumImageUrl = freezed,
-    Object? largeImageUrl = freezed,
+    Object? image = freezed,
     Object? streamable = freezed,
   }) {
     return _then(_value.copyWith(
@@ -111,30 +96,18 @@ class _$AlbumDtoCopyWithImpl<$Res> implements $AlbumDtoCopyWith<$Res> {
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
               as String?,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      smallImageUrl: smallImageUrl == freezed
-          ? _value.smallImageUrl
-          : smallImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediumImageUrl: mediumImageUrl == freezed
-          ? _value.mediumImageUrl
-          : mediumImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      largeImageUrl: largeImageUrl == freezed
-          ? _value.largeImageUrl
-          : largeImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
       streamable: streamable == freezed
           ? _value.streamable
           : streamable // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as String?,
     ));
   }
 }
@@ -145,14 +118,11 @@ abstract class _$AlbumDtoCopyWith<$Res> implements $AlbumDtoCopyWith<$Res> {
       __$AlbumDtoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(ignore: true) String? name,
+      {@JsonKey(ignore: false) String? name,
       String? artist,
-      String? id,
       String? url,
-      String? smallImageUrl,
-      String? mediumImageUrl,
-      String? largeImageUrl,
-      bool? streamable});
+      List<dynamic>? image,
+      String? streamable});
 }
 
 /// @nodoc
@@ -168,11 +138,8 @@ class __$AlbumDtoCopyWithImpl<$Res> extends _$AlbumDtoCopyWithImpl<$Res>
   $Res call({
     Object? name = freezed,
     Object? artist = freezed,
-    Object? id = freezed,
     Object? url = freezed,
-    Object? smallImageUrl = freezed,
-    Object? mediumImageUrl = freezed,
-    Object? largeImageUrl = freezed,
+    Object? image = freezed,
     Object? streamable = freezed,
   }) {
     return _then(_AlbumDto(
@@ -184,30 +151,18 @@ class __$AlbumDtoCopyWithImpl<$Res> extends _$AlbumDtoCopyWithImpl<$Res>
           ? _value.artist
           : artist // ignore: cast_nullable_to_non_nullable
               as String?,
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
       url: url == freezed
           ? _value.url
           : url // ignore: cast_nullable_to_non_nullable
               as String?,
-      smallImageUrl: smallImageUrl == freezed
-          ? _value.smallImageUrl
-          : smallImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      mediumImageUrl: mediumImageUrl == freezed
-          ? _value.mediumImageUrl
-          : mediumImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-      largeImageUrl: largeImageUrl == freezed
-          ? _value.largeImageUrl
-          : largeImageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<dynamic>?,
       streamable: streamable == freezed
           ? _value.streamable
           : streamable // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as String?,
     ));
   }
 }
@@ -216,39 +171,30 @@ class __$AlbumDtoCopyWithImpl<$Res> extends _$AlbumDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AlbumDto implements _AlbumDto {
   _$_AlbumDto(
-      {@JsonKey(ignore: true) this.name,
+      {@JsonKey(ignore: false) this.name,
       required this.artist,
-      required this.id,
       required this.url,
-      required this.smallImageUrl,
-      required this.mediumImageUrl,
-      required this.largeImageUrl,
+      required this.image,
       required this.streamable});
 
   factory _$_AlbumDto.fromJson(Map<String, dynamic> json) =>
       _$$_AlbumDtoFromJson(json);
 
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(ignore: false)
   final String? name;
   @override
   final String? artist;
   @override
-  final String? id;
-  @override
   final String? url;
   @override
-  final String? smallImageUrl;
+  final List<dynamic>? image;
   @override
-  final String? mediumImageUrl;
-  @override
-  final String? largeImageUrl;
-  @override
-  final bool? streamable;
+  final String? streamable;
 
   @override
   String toString() {
-    return 'AlbumDto(name: $name, artist: $artist, id: $id, url: $url, smallImageUrl: $smallImageUrl, mediumImageUrl: $mediumImageUrl, largeImageUrl: $largeImageUrl, streamable: $streamable)';
+    return 'AlbumDto(name: $name, artist: $artist, url: $url, image: $image, streamable: $streamable)';
   }
 
   @override
@@ -258,21 +204,15 @@ class _$_AlbumDto implements _AlbumDto {
             other is _AlbumDto &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.artist, artist) || other.artist == artist) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.url, url) || other.url == url) &&
-            (identical(other.smallImageUrl, smallImageUrl) ||
-                other.smallImageUrl == smallImageUrl) &&
-            (identical(other.mediumImageUrl, mediumImageUrl) ||
-                other.mediumImageUrl == mediumImageUrl) &&
-            (identical(other.largeImageUrl, largeImageUrl) ||
-                other.largeImageUrl == largeImageUrl) &&
+            const DeepCollectionEquality().equals(other.image, image) &&
             (identical(other.streamable, streamable) ||
                 other.streamable == streamable));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, artist, id, url,
-      smallImageUrl, mediumImageUrl, largeImageUrl, streamable);
+  int get hashCode => Object.hash(runtimeType, name, artist, url,
+      const DeepCollectionEquality().hash(image), streamable);
 
   @JsonKey(ignore: true)
   @override
@@ -287,34 +227,25 @@ class _$_AlbumDto implements _AlbumDto {
 
 abstract class _AlbumDto implements AlbumDto {
   factory _AlbumDto(
-      {@JsonKey(ignore: true) String? name,
+      {@JsonKey(ignore: false) String? name,
       required String? artist,
-      required String? id,
       required String? url,
-      required String? smallImageUrl,
-      required String? mediumImageUrl,
-      required String? largeImageUrl,
-      required bool? streamable}) = _$_AlbumDto;
+      required List<dynamic>? image,
+      required String? streamable}) = _$_AlbumDto;
 
   factory _AlbumDto.fromJson(Map<String, dynamic> json) = _$_AlbumDto.fromJson;
 
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(ignore: false)
   String? get name;
   @override
   String? get artist;
   @override
-  String? get id;
-  @override
   String? get url;
   @override
-  String? get smallImageUrl;
+  List<dynamic>? get image;
   @override
-  String? get mediumImageUrl;
-  @override
-  String? get largeImageUrl;
-  @override
-  bool? get streamable;
+  String? get streamable;
   @override
   @JsonKey(ignore: true)
   _$AlbumDtoCopyWith<_AlbumDto> get copyWith =>

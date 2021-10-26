@@ -13,7 +13,7 @@ class SearchAlbumWidget extends StatelessWidget {
             onPressed: () {
               context
                   .read<SearchAlbumBloc>()
-                  .add(const SearchAlbumEvent.getAlbums("rap"));
+                  .add(const SearchAlbumEvent.getAlbums("love"));
             },
             child: const Text(
               'Press Me',

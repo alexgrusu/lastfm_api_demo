@@ -7,4 +7,5 @@ class SearchAlbumFailure with _$SearchAlbumFailure {
   const factory SearchAlbumFailure.none() = _None;
   const factory SearchAlbumFailure.invalidService() = _InvalidService;
   const factory SearchAlbumFailure.invalidMethod() = _InvalidMethod;
+  const factory SearchAlbumFailure.somethingWentWrong() = _SomethingWentWrong;
 }

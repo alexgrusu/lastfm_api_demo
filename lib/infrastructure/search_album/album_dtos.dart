@@ -8,14 +8,11 @@ part 'album_dtos.g.dart';
 @freezed
 class AlbumDto with _$AlbumDto {
   factory AlbumDto({
-    @JsonKey(ignore: true) String? name,
+    @JsonKey(ignore: false) String? name,
     required String? artist,
-    required String? id,
     required String? url,
-    required String? smallImageUrl,
-    required String? mediumImageUrl,
-    required String? largeImageUrl,
-    required bool? streamable,
+    required List? image,
+    required String? streamable,
   }) = _AlbumDto;
 
   factory AlbumDto.fromJson(Map<String, dynamic> json) =>
@@ -31,11 +28,8 @@ extension AlbumDtoX on AlbumDto {
     return Album(
       name: name!,
       artist: artist!,
-      id: id!,
       url: url!,
-      smallImageUrl: smallImageUrl!,
-      mediumImageUrl: mediumImageUrl!,
-      largeImageUrl: largeImageUrl!,
+      image: image!,
       streamable: streamable!,
     );
   }
