@@ -1,4 +1,5 @@
 import 'package:fastfm_api_demo/application/search_album/search_album_bloc.dart';
+import 'package:fastfm_api_demo/presentation/common/show_toast.dart';
 import 'package:fastfm_api_demo/presentation/pages/home/widgets/album_card_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -12,7 +13,18 @@ class SearchAlbumWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<SearchAlbumBloc, SearchAlbumState>(
       listener: (context, state) {
-        debugPrint(state.failure.toString());
+        state.failure.map(
+          none: (_) {},
+          invalidService: (_) async {
+            await showToast(context, "Invalid service");
+          },
+          invalidMethod: (_) async {
+            await showToast(context, "Invalid method");
+          },
+          somethingWentWrong: (_) async {
+            await showToast(context, "Something went wrong");
+          },
+        );
       },
       builder: (context, state) {
         return Column(

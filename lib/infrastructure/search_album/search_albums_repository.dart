@@ -29,7 +29,6 @@ class SearchAlbumRepository implements ISearchAlbumRepository {
       final listOfAlbums = dynamicList
           .map((json) => AlbumDto.fromFastFm(json).toDomain())
           .toList();
-      debugPrint(listOfAlbums.toString());
       return right(listOfAlbums);
     } else {
       return left(const SearchAlbumFailure.somethingWentWrong());
