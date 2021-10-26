@@ -4,6 +4,7 @@ import 'package:fastfm_api_demo/domain/search_album/i_search_album_repository.da
 import 'package:fastfm_api_demo/domain/search_album/search_album_failure.dart';
 import 'package:fastfm_api_demo/infrastructure/search_album/album_dtos.dart';
 import 'package:fastfm_api_demo/infrastructure/search_album/common.dart';
+import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -28,6 +29,7 @@ class SearchAlbumRepository implements ISearchAlbumRepository {
       final listOfAlbums = dynamicList
           .map((json) => AlbumDto.fromFastFm(json).toDomain())
           .toList();
+      debugPrint(listOfAlbums.toString());
       return right(listOfAlbums);
     } else {
       return left(const SearchAlbumFailure.somethingWentWrong());

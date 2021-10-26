@@ -1,3 +1,5 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 const apiRoute = "https://ws.audioscrobbler.com/2.0/";
 
 const albumSearchAction = "?method=album.search&album=";
